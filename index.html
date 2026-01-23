@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nature & Travel Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Nature & Travel Gallery</h1>
+    <p class="subtitle">Mountains • Beaches • Forests</p>
+
+    <!-- Category Filters -->
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('mountain')">Mountains</button>
+        <button onclick="filterImages('beach')">Beaches</button>
+        <button onclick="filterImages('forest')">Forests</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <!-- 🏔️ MOUNTAINS -->
+        <img src="https://picsum.photos/id/1002/600/400" data-category="mountain" onclick="openLightbox(0)">
+        <img src="https://picsum.photos/id/1003/600/400" data-category="mountain" onclick="openLightbox(1)">
+        <img src="https://picsum.photos/id/1016/600/400" data-category="mountain" onclick="openLightbox(2)">
+        <img src="https://picsum.photos/id/1024/600/400" data-category="mountain" onclick="openLightbox(3)">
+        <img src="https://picsum.photos/id/1032/600/400" data-category="mountain" onclick="openLightbox(4)">
+        <img src="https://picsum.photos/id/1036/600/400" data-category="mountain" onclick="openLightbox(5)">
+        <img src="https://picsum.photos/id/1043/600/400" data-category="mountain" onclick="openLightbox(6)">
+        <img src="https://picsum.photos/id/1056/600/400" data-category="mountain" onclick="openLightbox(7)">
+        <img src="https://picsum.photos/id/1062/600/400" data-category="mountain" onclick="openLightbox(8)">
+        <img src="https://picsum.photos/id/1074/600/400" data-category="mountain" onclick="openLightbox(9)">
+
+        <!-- 🏖️ BEACHES -->
+        <img src="https://picsum.photos/id/1011/600/400" data-category="beach" onclick="openLightbox(10)">
+        <img src="https://picsum.photos/id/1012/600/400" data-category="beach" onclick="openLightbox(11)">
+        <img src="https://picsum.photos/id/1013/600/400" data-category="beach" onclick="openLightbox(12)">
+        <img src="https://picsum.photos/id/1014/600/400" data-category="beach" onclick="openLightbox(13)">
+        <img src="https://picsum.photos/id/1015/600/400" data-category="beach" onclick="openLightbox(14)">
+        <img src="https://picsum.photos/id/1029/600/400" data-category="beach" onclick="openLightbox(15)">
+        <img src="https://picsum.photos/id/1035/600/400" data-category="beach" onclick="openLightbox(16)">
+        <img src="https://picsum.photos/id/1041/600/400" data-category="beach" onclick="openLightbox(17)">
+        <img src="https://picsum.photos/id/1050/600/400" data-category="beach" onclick="openLightbox(18)">
+        <img src="https://picsum.photos/id/1069/600/400" data-category="beach" onclick="openLightbox(19)">
+
+        <!-- 🌲 FORESTS -->
+        <img src="https://picsum.photos/id/1018/600/400" data-category="forest" onclick="openLightbox(20)">
+        <img src="https://picsum.photos/id/1020/600/400" data-category="forest" onclick="openLightbox(21)">
+        <img src="https://picsum.photos/id/1021/600/400" data-category="forest" onclick="openLightbox(22)">
+        <img src="https://picsum.photos/id/1022/600/400" data-category="forest" onclick="openLightbox(23)">
+        <img src="https://picsum.photos/id/1023/600/400" data-category="forest" onclick="openLightbox(24)">
+        <img src="https://picsum.photos/id/1031/600/400" data-category="forest" onclick="openLightbox(25)">
+        <img src="https://picsum.photos/id/1040/600/400" data-category="forest" onclick="openLightbox(26)">
+        <img src="https://picsum.photos/id/1047/600/400" data-category="forest" onclick="openLightbox(27)">
+        <img src="https://picsum.photos/id/1058/600/400" data-category="forest" onclick="openLightbox(28)">
+        <img src="https://picsum.photos/id/1066/600/400" data-category="forest" onclick="openLightbox(29)">
+
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+
+    <button class="nav left" onclick="prevImage()">❮</button>
+
+    <div class="lightbox-content">
+        <img id="lightbox-img">
+
+        <div class="image-filters">
+            <button onclick="applyFilter('none')">Normal</button>
+            <button onclick="applyFilter('grayscale(100%)')">Grayscale</button>
+            <button onclick="applyFilter('sepia(100%)')">Sepia</button>
+            <button onclick="applyFilter('blur(3px)')">Blur</button>
+            <button onclick="applyFilter('brightness(120%)')">Bright</button>git init
+
+            <button onclick="applyFilter('contrast(150%)')">Contrast</button>
+            <button onclick="deleteCurrentImage()">Delete</button>
+        </div>
+    </div>
+
+    <button class="nav right" onclick="nextImage()">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body Background ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* ===== Container ===== */
+.container {
+    padding: 30px;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    margin-bottom: 25px;
+}
+
+/* ===== Category Filter Buttons ===== */
+.filters {
+    margin-bottom: 30px;
+}
+
+.filters button {
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.filters button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 81, 47, 0.8);
+}
+
+/* ===== Image Gallery Grid ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    padding: 20px;
+}
+
+/* ===== Gallery Images ===== */
+.gallery img {
+    width: 100%;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.gallery img:hover {
+    transform: translateY(-12px) scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Lightbox Overlay ===== */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* ===== Lightbox Content ===== */
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Lightbox Image ===== */
+#lightbox-img {
+    max-width: 90%;
+    max-height: 70%;
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.7);
+    margin-bottom: 20px;
+    transition: filter 0.3s ease;
+}
+
+/* ===== Navigation Buttons ===== */
+.nav {
+    font-size: 48px;
+    background: none;
+    border: none;
+    color: cyan;
+    cursor: pointer;
+    text-shadow: 0 0 20px cyan;
+    transition: transform 0.3s ease;
+}
+
+.nav:hover {
+    transform: scale(1.2);
+}
+
+.left {
+    margin-right: 30px;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+/* ===== Filter Buttons Inside Lightbox ===== */
+.image-filters {
+    margin-top: 10px;
+}
+
+.image-filters button {
+    padding: 9px 18px;
+    margin: 6px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-filters button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.9);
+}
+
+/* ===== Close Button ===== */
+.close {
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav {
+        font-size: 38px;
+    }
+
+    #lightbox-img {
+        max-height: 60%;
+    }
+}
